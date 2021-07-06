@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Pic from '../../assests/Images/HomeBack1.jpg';
 import { WiCloudy } from 'react-icons/wi';
-import './Home.css';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
+import Pic from '../../assests/Images/HomeBack1.jpg';
+import './Home.css';
 
 export const Home = ({ city }) => {
 
@@ -29,7 +29,7 @@ export const Home = ({ city }) => {
     const [latitude, setLatitude] = useState('');
     const [wrongPage, setWrongPage] = useState('false');
 
-    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city.toLowerCase()}&appid=b56dbf339667695fb7799dcdeda463cd`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city.toLowerCase()}&appid={ Api key }`;
 
     useEffect(() => {
         fetch(url).then((response) => {
